@@ -25,6 +25,7 @@ export const getTotalCashInvested = (data) => {
 
 export const getNetOperatingIncome = (data) => {
   const grossOperatingIncome = getGrossOperatingIncome(data);
+  const operatingExpenses = getOperatingExpenses(data);
 };
 
 export const getGrossOperatingIncome = (data) => {
@@ -37,6 +38,8 @@ export const getGrossOperatingIncome = (data) => {
     _strToInt(grossRent) * (_strToInt(vacancyPercentage) / 100) * 12;
   return totalYearlyIncome - totalYearlyVacancy;
 };
+
+export const getOperatingExpenses = (data) => {};
 
 export const getMonthlyMortgagePayment = (data) => {
   const {
